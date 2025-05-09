@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+    var account = ViewBag.Account as Account; // Strongly type the ViewBag
+}
+
+@if (account == null)
+{
+    <div class="alert alert-danger">
+        <h2>Profile not found</h2>
+    </div>
+}
+else
+{
+    <h2>Your Profile</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img src="@account.Avatar" alt="@account.Name's avatar" style="width:80%" />
+                <div class="col-md-8">
+                    <h2>Full name: @account.Name</h2>
+                    <h2>Email: @account.Email</h2>
+                    <h2>Address: @account.Address</h2>
+                    <h2>Bio: @account.Bio</h2>
+                    <h2>
+                        Gender:
+                        @if (account.Gender == 1)
+                        {
+                            <span>Male</span>
+                        }
+                        else
+                        {
+                            <span>Female</span>
+                        }
+                    </h2>
+                    <h2>Birthday: @account.Birthday.ToString("dd/MM/yyyy")</h2>
+                    <p>
+                        <a asp-controller="Account"
+                           asp-action="Index"
+                           class="btn btn-danger">
+                            Back to list
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
