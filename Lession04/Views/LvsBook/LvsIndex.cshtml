@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Lession04.Models.LvsBook>
+@{
+    ViewData["Title"] = "Danh sách các cuốn sách";
+    Layout = "_LvsLayout";
+}
+@{
+    ViewData["Title"] = "Danh sách các cuốn sách";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row mb-3">
+    <div class="col-md-3">
+        <select class="form-control">
+            <option>Chọn tác giả</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <select class="form-control">
+            <option>Chọn Thể loại</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Tìm kiếm">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary">Thêm mới</button>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Lvs_Id</th>
+            <th>Lvs_TenSach</th>
+            <th>Lvs_TacGia</th>
+            <th>Lvs_TheLoai</th>
+            <th>Lvs_GiaSach</th>
+            <th>Lvs_HinhAnh</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Author</td>
+                <td>@item.Category</td>
+                <td>@item.Price.ToString("N0")</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@item.ImagePath" alt="Book image" style="max-height: 80px;" />
+                    }
+                </td>
+                <td>
+                    <a asp-action="LvsEdit" asp-route-id="@item.Id" class="btn btn-warning">Sửa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
