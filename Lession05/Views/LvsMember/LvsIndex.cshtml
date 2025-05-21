@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Lession05.Models.DataModels.LvsMember>
+
+<div class="container">
+    <h2 class="my-4 text-primary">Danh sách thành viên</h2>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover shadow-sm bg-white">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Tên đăng nhập</th>
+                    <th scope="col">Họ tên</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var member in Model)
+                {
+                    <tr>
+                        <td>@member.LvsMemberId</td>
+                        <td>@member.LvsUserName</td>
+                        <td>@member.LvsFullName</td>
+                        <td>@member.LvsEmail</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

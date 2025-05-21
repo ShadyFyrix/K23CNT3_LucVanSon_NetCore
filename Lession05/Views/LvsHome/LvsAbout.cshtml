@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Thông Tin Sinh Viên";
+}
+
+<div class="container my-4">
+    <h1 class="mb-3 text-primary">@ViewData["Title"]</h1>
+    <hr />
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p><strong>Member ID:</strong> @Model.LvsMemberId</p>
+            <p><strong>Member User Name:</strong> @Model.LvsUserName</p>
+            <p><strong>Member Password:</strong> @Model.LvsPassword</p>
+            <p><strong>Member FullName:</strong> @Model.LvsFullName</p>
+            <p><strong>Member Email:</strong> @Model.LvsEmail</p>
+        </div>
+    </div>
+</div>

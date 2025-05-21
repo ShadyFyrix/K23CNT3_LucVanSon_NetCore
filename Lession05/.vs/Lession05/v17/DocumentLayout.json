@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lession05\\views\\lvshome\\lvsabout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|solutionrelative:views\\lvshome\\lvsabout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lession05\\views\\lvshome\\lvsindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|solutionrelative:views\\lvshome\\lvsindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lession05\\views\\lvsmember\\lvsindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|solutionrelative:views\\lvsmember\\lvsindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lession05\\views\\shared\\_lvslayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|solutionrelative:views\\shared\\_lvslayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lession05\\views\\shared\\_lvsnavbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C470AE7F-643F-4793-9622-1015A8CA3A9F}|Lession05.csproj|solutionrelative:views\\shared\\_lvsnavbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LvsIndex.cshtml",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsHome\\LvsIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\LvsHome\\LvsIndex.cshtml",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsHome\\LvsIndex.cshtml",
+              "RelativeToolTip": "Views\\LvsHome\\LvsIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T03:07:35.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LvsAbout.cshtml",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsHome\\LvsAbout.cshtml",
+              "RelativeDocumentMoniker": "Views\\LvsHome\\LvsAbout.cshtml",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsHome\\LvsAbout.cshtml",
+              "RelativeToolTip": "Views\\LvsHome\\LvsAbout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T03:04:30.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LvsIndex.cshtml",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsMember\\LvsIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\LvsMember\\LvsIndex.cshtml",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\LvsMember\\LvsIndex.cshtml",
+              "RelativeToolTip": "Views\\LvsMember\\LvsIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T02:58:13.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_LvsLayout.cshtml",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\Shared\\_LvsLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LvsLayout.cshtml",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\Shared\\_LvsLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LvsLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T02:14:37.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LvsNavBar.cshtml",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\Shared\\_LvsNavBar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LvsNavBar.cshtml",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lession05\\Views\\Shared\\_LvsNavBar.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LvsNavBar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T02:13:11.171Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
