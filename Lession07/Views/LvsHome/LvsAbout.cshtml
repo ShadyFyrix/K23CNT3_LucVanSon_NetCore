@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Thông Tin Sinh Viên";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewData["Title"]</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="mb-4">
+                    <div class="avatar-circle bg-primary text-white mx-auto mb-3">
+                        <i class="bi bi-person-fill" style="font-size: 3rem;"></i>
+                    </div>
+                    <h4 class="font-weight-bold">@ViewBag.StudentName</h4>
+                    <p class="text-muted">Student</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Student ID
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.StudentId</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-person-badge-fill text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row no-gutters align-items-center mt-3">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Email
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    <a href="mailto:@ViewBag.Email">@ViewBag.Email</a>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-envelope-fill text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row no-gutters align-items-center mt-3">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Project
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Employee Management System</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="bi bi-code-square text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

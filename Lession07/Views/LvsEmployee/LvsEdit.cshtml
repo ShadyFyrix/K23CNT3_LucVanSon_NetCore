@@ -1,0 +1,75 @@
+﻿@model Lession07.Models.LvsEmployee
+
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<div class="card shadow">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">@ViewData["Title"]</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="LvsEdit" asp-route-id="@Model.LvsId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="LvsId" class="control-label"></label>
+                        <input asp-for="LvsId" class="form-control" readonly />
+                        <span asp-validation-for="LvsId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LvsName" class="control-label"></label>
+                        <input asp-for="LvsName" class="form-control" />
+                        <span asp-validation-for="LvsName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LvsBirthDay" class="control-label"></label>
+                        <input asp-for="LvsBirthDay" class="form-control" />
+                        <span asp-validation-for="LvsBirthDay" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="LvsEmail" class="control-label"></label>
+                        <input asp-for="LvsEmail" class="form-control" />
+                        <span asp-validation-for="LvsEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LvsPhone" class="control-label"></label>
+                        <input asp-for="LvsPhone" class="form-control" />
+                        <span asp-validation-for="LvsPhone" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="LvsSalary" class="control-label"></label>
+                        <input asp-for="LvsSalary" class="form-control" />
+                        <span asp-validation-for="LvsSalary" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="LvsStatus" /> @Html.DisplayNameFor(model => model.LvsStatus)
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mt-4">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="LvsIndex" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

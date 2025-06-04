@@ -13,14 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\images\\footer.jpg",
-      "PackagePath": "staticwebassets\\images\\footer.jpg"
-    },
-    {
-      "Id": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\images\\header.jpg",
-      "PackagePath": "staticwebassets\\images\\header.jpg"
-    },
-    {
       "Id": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

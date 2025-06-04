@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{277C6DC9-905B-4673-92C8-F356641205F1}|LvsLab06.csproj|solutionrelative:views\\shared\\_lvslayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{277C6DC9-905B-4673-92C8-F356641205F1}|LvsLab06.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lvslab06\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{277C6DC9-905B-4673-92C8-F356641205F1}|LvsLab06.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{277C6DC9-905B-4673-92C8-F356641205F1}|LvsLab06.csproj|d:\\k23cnt3_lucvanson_2310900087_netcore\\k23cnt3_lucvanson_netcore\\lvslab06\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{277C6DC9-905B-4673-92C8-F356641205F1}|LvsLab06.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-05-28T03:41:04.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -42,12 +59,11 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAANgAAAAAAAAAAAAmwCMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-28T01:56:24.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:56:24.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LvsAbout.cshtml",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\LvsHome\\LvsAbout.cshtml",
               "RelativeDocumentMoniker": "Views\\LvsHome\\LvsAbout.cshtml",
@@ -55,12 +71,11 @@
               "RelativeToolTip": "Views\\LvsHome\\LvsAbout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:43:49.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:43:49.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LvsEdit.cshtml",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\LvsEmployee\\LvsEdit.cshtml",
               "RelativeDocumentMoniker": "Views\\LvsEmployee\\LvsEdit.cshtml",
@@ -68,12 +83,11 @@
               "RelativeToolTip": "Views\\LvsEmployee\\LvsEdit.cshtml",
               "ViewState": "AgIAADMAAAAAAAAAAAAkwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:43:08.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:43:08.246Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LvsCreate.cshtml",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\LvsEmployee\\LvsCreate.cshtml",
               "RelativeDocumentMoniker": "Views\\LvsEmployee\\LvsCreate.cshtml",
@@ -81,8 +95,7 @@
               "RelativeToolTip": "Views\\LvsEmployee\\LvsCreate.cshtml",
               "ViewState": "AgIAAEYAAAAAAAAAAAAkwF8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:42:31.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:42:31.1Z"
             },
             {
               "$type": "Document",
@@ -92,7 +105,7 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_LvsLayout.cshtml",
               "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\Shared\\_LvsLayout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_LvsLayout.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAADwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAE4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-28T01:36:20.224Z",
               "EditorCaption": ""

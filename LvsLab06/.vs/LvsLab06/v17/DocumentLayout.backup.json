@@ -42,8 +42,7 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAANgAAAAAAAAAAAAmwCMBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-28T01:56:24.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:56:24.534Z"
             },
             {
               "$type": "Document",
@@ -55,8 +54,7 @@
               "RelativeToolTip": "Views\\LvsHome\\LvsAbout.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAAEAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:43:49.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:43:49.096Z"
             },
             {
               "$type": "Document",
@@ -68,8 +66,7 @@
               "RelativeToolTip": "Views\\LvsEmployee\\LvsEdit.cshtml",
               "ViewState": "AgIAADMAAAAAAAAAAAAkwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:43:08.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:43:08.246Z"
             },
             {
               "$type": "Document",
@@ -81,8 +78,7 @@
               "RelativeToolTip": "Views\\LvsEmployee\\LvsCreate.cshtml",
               "ViewState": "AgIAAEYAAAAAAAAAAAAkwF8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T01:42:31.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-28T01:42:31.1Z"
             },
             {
               "$type": "Document",
@@ -90,9 +86,9 @@
               "Title": "_LvsLayout.cshtml",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\Shared\\_LvsLayout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LvsLayout.cshtml",
-              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\Shared\\_LvsLayout.cshtml*",
-              "RelativeToolTip": "Views\\Shared\\_LvsLayout.cshtml*",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAADwAAAAbAAAAAAAAAA==",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\LvsLab06\\Views\\Shared\\_LvsLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LvsLayout.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAADwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-28T01:36:20.224Z",
               "EditorCaption": ""

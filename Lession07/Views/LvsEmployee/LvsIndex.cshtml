@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Lession07.Models.LvsEmployee>
+
+@{
+    ViewData["Title"] = "Employee Management";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Employee List</h6>
+        <a asp-action="LvsCreate" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Create New
+        </a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.LvsId)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsName)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsBirthDay)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsEmail)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsPhone)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsSalary)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsStatus)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.LvsId)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LvsName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LvsBirthDay)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LvsEmail)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LvsPhone)</td>
+                            <td>@Html.DisplayFor(modelItem => item.LvsSalary)</td>
+                            <td>
+                                @if (item.LvsStatus)
+                                {
+                                    <span class="badge badge-success">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-danger">Inactive</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="btn-group" role="group">
+                                    @Html.ActionLink("Edit", "LvsEdit", new { id = item.LvsId }, new { @class = "btn btn-warning btn-sm" })
+                                    @Html.ActionLink("Details", "LvsDetails", new { id = item.LvsId }, new { @class = "btn btn-info btn-sm" })
+                                    @Html.ActionLink("Delete", "LvsDelete", new { id = item.LvsId }, new { @class = "btn btn-danger btn-sm" })
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
