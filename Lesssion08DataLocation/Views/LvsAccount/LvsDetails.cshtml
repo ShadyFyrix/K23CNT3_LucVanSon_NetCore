@@ -1,0 +1,68 @@
+﻿@model LvsCoreMVC.LvsModels.LvsAccount
+
+@{
+    ViewData["Title"] = "Chi tiết tài khoản";
+}
+
+<h1>Chi tiết tài khoản</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsId)</dd>
+
+        <dt class="col-sm-3">Họ và tên</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsFullName)</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsEmail)</dd>
+
+        <dt class="col-sm-3">Số điện thoại</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsPhone)</dd>
+
+        <dt class="col-sm-3">Địa chỉ</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsAddress)</dd>
+
+        <dt class="col-sm-3">Ảnh đại diện</dt>
+        <dd class="col-sm-9">
+            @if (!string.IsNullOrEmpty(Model.LvsAvatar))
+            {
+                <img src="@Model.LvsAvatar" alt="Avatar" style="max-width: 200px; max-height: 200px;" />
+            }
+            else
+            {
+                <span>Không có ảnh</span>
+            }
+        </dd>
+
+        <dt class="col-sm-3">Ngày sinh</dt>
+        <dd class="col-sm-9">@Model.LvsBirthday.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-3">Giới tính</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.LvsGender)</dd>
+
+        <dt class="col-sm-3">Facebook</dt>
+        <dd class="col-sm-9">
+            @if (!string.IsNullOrEmpty(Model.LvsFacebook))
+            {
+                <a href="@Model.LvsFacebook" target="_blank">@Model.LvsFacebook</a>
+            }
+            else
+            {
+                <span>Không có</span>
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="LvsEdit" asp-route-id="@Model.LvsId" class="btn btn-warning">Sửa</a>
+    <form asp-action="LvsDelete" method="post" style="display:inline">
+        <input type="hidden" name="id" value="@Model.LvsId" />
+        <button type="submit" class="btn btn-danger"
+                onclick="return confirm('Bạn có chắc muốn xóa tài khoản này?')">
+            Xóa
+        </button>
+    </form>
+    <a asp-action="LvsIndex" class="btn btn-secondary">Quay lại danh sách</a>
+</div>

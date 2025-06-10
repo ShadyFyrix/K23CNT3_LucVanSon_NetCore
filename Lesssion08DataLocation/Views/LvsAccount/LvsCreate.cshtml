@@ -1,0 +1,77 @@
+﻿@model LvsCoreMVC.LvsModels.LvsAccount
+
+@{
+    ViewData["Title"] = "Tạo tài khoản mới";
+}
+
+<h1>Tạo tài khoản mới</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="LvsCreate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="LvsFullName" class="control-label"></label>
+                <input asp-for="LvsFullName" class="form-control" />
+                <span asp-validation-for="LvsFullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsEmail" class="control-label"></label>
+                <input asp-for="LvsEmail" class="form-control" />
+                <span asp-validation-for="LvsEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsPhone" class="control-label"></label>
+                <input asp-for="LvsPhone" class="form-control" placeholder="VD: 0987654321" />
+                <span asp-validation-for="LvsPhone" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsAddress" class="control-label"></label>
+                <input asp-for="LvsAddress" class="form-control" />
+                <span asp-validation-for="LvsAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsAvatar" class="control-label"></label>
+                <input asp-for="LvsAvatar" class="form-control" placeholder="URL ảnh đại diện" />
+                <span asp-validation-for="LvsAvatar" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsBirthday" class="control-label"></label>
+                <input asp-for="LvsBirthday" type="date" class="form-control" />
+                <span asp-validation-for="LvsBirthday" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsGender" class="control-label"></label>
+                <select asp-for="LvsGender" class="form-control" asp-items="ViewBag.LvsGender">
+                    <option value="">-- Chọn giới tính --</option>
+                </select>
+                <span asp-validation-for="LvsGender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsPassword" class="control-label"></label>
+                <input asp-for="LvsPassword" type="password" class="form-control" />
+                <span asp-validation-for="LvsPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LvsFacebook" class="control-label"></label>
+                <input asp-for="LvsFacebook" class="form-control" placeholder="VD: https://facebook.com/username" />
+                <span asp-validation-for="LvsFacebook" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Tạo mới" class="btn btn-primary" />
+                <a asp-action="LvsIndex" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </form>
+    </div>
+</div>

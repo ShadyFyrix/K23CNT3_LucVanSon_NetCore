@@ -1,0 +1,46 @@
+﻿@model IEnumerable<LvsCoreMVC.LvsModels.LvsAccount>
+
+@{
+    ViewData["Title"] = "Danh sách tài khoản";
+}
+
+<h1>Danh sách tài khoản</h1>
+
+<p>
+    <a asp-action="LvsCreate" class="btn btn-success">Tạo mới</a>
+</p>
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Họ tên</th>
+            <th>Email</th>
+            <th>Điện thoại</th>
+            <th>Giới tính</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.LvsId)</td>
+                <td>@Html.DisplayFor(modelItem => item.LvsFullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.LvsEmail)</td>
+                <td>@Html.DisplayFor(modelItem => item.LvsPhone)</td>
+                <td>@Html.DisplayFor(modelItem => item.LvsGender)</td>
+                <td>
+                    <a asp-action="LvsEdit" asp-route-id="@item.LvsId" class="btn btn-sm btn-warning">Sửa</a>
+                    <a asp-action="LvsDetails" asp-route-id="@item.LvsId" class="btn btn-sm btn-info">Chi tiết</a>
+                    <form asp-action="LvsDelete" method="post" style="display:inline">
+                        <input type="hidden" name="id" value="@item.LvsId" />
+                        <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Bạn có chắc muốn xóa tài khoản này?')">
+                            Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

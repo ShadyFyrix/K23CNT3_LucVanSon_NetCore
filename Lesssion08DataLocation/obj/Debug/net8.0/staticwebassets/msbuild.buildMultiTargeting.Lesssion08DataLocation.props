@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Lesssion08DataLocation.props" />
+</Project>
