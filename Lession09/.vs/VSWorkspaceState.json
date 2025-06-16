@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Models",
+    "\\Views",
+    "\\Views\\LvsAccount",
+    "\\Views\\LvsHome",
+    "\\Views\\Shared"
+  ],
+  "SelectedNode": "\\Views\\Shared\\_LvsNavBar.cshtml",
+  "PreviewInSolutionExplorer": false
+}

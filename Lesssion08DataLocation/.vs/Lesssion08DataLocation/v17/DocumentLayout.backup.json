@@ -66,8 +66,7 @@
               "RelativeToolTip": "Views\\LvsAccount\\LvsEdit.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAQwE8AAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T02:24:48.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T02:24:48.977Z"
             },
             {
               "$type": "Document",
@@ -75,9 +74,9 @@
               "Title": "LvsCreate.cshtml",
               "DocumentMoniker": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lesssion08DataLocation\\Views\\LvsAccount\\LvsCreate.cshtml",
               "RelativeDocumentMoniker": "Views\\LvsAccount\\LvsCreate.cshtml",
-              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lesssion08DataLocation\\Views\\LvsAccount\\LvsCreate.cshtml*",
-              "RelativeToolTip": "Views\\LvsAccount\\LvsCreate.cshtml*",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwE0AAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\K23CNT3_LucVanSon_2310900087_NetCore\\K23CNT3_LucVanSon_NetCore\\Lesssion08DataLocation\\Views\\LvsAccount\\LvsCreate.cshtml",
+              "RelativeToolTip": "Views\\LvsAccount\\LvsCreate.cshtml",
+              "ViewState": "AgIAACsAAAAAAAAAAAAUwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-10T02:24:12.879Z",
               "EditorCaption": ""
@@ -92,8 +91,7 @@
               "RelativeToolTip": "Views\\LvsAccount\\LvsDetails.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwEMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T02:21:37.825Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T02:21:37.825Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "Views\\LvsAccount\\LvsIndex.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T02:20:59.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T02:20:59.831Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "Controllers\\LvsAccountController.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAAwDEAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T02:02:30.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T02:02:30.877Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "Models\\LvsAccount.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAswDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T02:00:07.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T02:00:07.482Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "Views\\Shared\\_LvsNavBar.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-10T01:34:03.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T01:34:03.625Z"
             }
           ]
         }

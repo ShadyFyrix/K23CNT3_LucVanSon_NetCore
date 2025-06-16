@@ -1,0 +1,36 @@
+﻿@model Lession09.Models.Publisher
+
+@{
+    ViewData["Title"] = "LvsDetails";
+}
+
+<h1>Publisher Details</h1>
+
+<div>
+    <h4>Publisher</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PublisherName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PublisherName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="LvsEdit" asp-route-id="@Model.PublisherId" class="btn btn-warning">Edit</a>
+    <a asp-action="LvsIndex" class="btn btn-secondary">Back to List</a>
+</div>

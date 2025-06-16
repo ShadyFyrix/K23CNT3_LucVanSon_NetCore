@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lesssion08DataLocation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f81798985a867af2d4ac85a67891d9d5fee5cca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f22c95f33e6ff6ede1084ad1a12036561d8bc9f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lesssion08DataLocation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lesssion08DataLocation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

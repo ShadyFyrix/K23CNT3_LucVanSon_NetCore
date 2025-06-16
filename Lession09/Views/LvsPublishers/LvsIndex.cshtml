@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Lession09.Models.Publisher>
+
+@{
+    ViewData["Title"] = "LvsIndex";
+}
+
+<h1>Publisher List</h1>
+
+<p>
+    <a asp-action="LvsCreate" class="btn btn-primary">Create New</a>
+</p>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PublisherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PublisherName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    <a asp-action="LvsEdit" asp-route-id="@item.PublisherId" class="btn btn-warning">Edit</a>
+                    <a asp-action="LvsDetails" asp-route-id="@item.PublisherId" class="btn btn-info">Details</a>
+                    <a asp-action="LvsDelete" asp-route-id="@item.PublisherId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
