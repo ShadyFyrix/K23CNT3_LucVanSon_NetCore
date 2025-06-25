@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Lession10.Models.LvsPost>
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<div class="container py-5 animate-in">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <div>
+            <h2 class="mb-1">Posts</h2>
+            <p class="text-muted mb-0">Manage your blog posts</p>
+        </div>
+        <a asp-action="LvsCreate" class="btn btn-primary">
+            <i class="fas fa-plus mr-2"></i>New Post
+        </a>
+    </div>
+
+    <div class="card shadow-hover">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th width="120px">Image</th>
+                            <th width="120px">Status</th>
+                            <th width="150px" class="text-end">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="font-weight-medium">@item.Lvsname</div>
+                                    <div class="text-muted small">@item.LvsContent.Substring(0, Math.Min(item.LvsContent.Length, 60))...</div>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.LvsImage))
+                                    {
+                                        <img src="@item.LvsImage" class="rounded-xl" width="60" height="60" style="object-fit: cover;" />
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-light rounded-xl d-flex align-items-center justify-content-center" style="width:60px; height:60px;">
+                                            <i class="fas fa-image text-muted"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    <span class="status-badge @(item.LvsStats ? "status-active" : "status-inactive")">
+                                        @(item.LvsStats ? "Published" : "Draft")
+                                    </span>
+                                </td>
+                                <td class="text-end">
+                                    <div class="btn-group">
+                                        <a asp-action="LvsEdit" asp-route-id="@item.Lvsid"
+                                           class="btn btn-sm btn-outline" title="LvsEdit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a asp-action="LvsDetails" asp-route-id="@item.Lvsid"
+                                           class="btn btn-sm btn-outline" title="LvsDetails">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a asp-action="LvsDelete" asp-route-id="@item.Lvsid"
+                                           class="btn btn-sm btn-outline text-danger" title="LvsDelete">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Add hover effects to table rows
+        document.querySelectorAll('tbody tr').forEach(row => {
+            row.style.cursor = 'pointer';
+            row.addEventListener('click', (e) => {
+                // Don't redirect if clicked on an action button
+                if (!e.target.closest('a, button')) {
+                    const id = row.querySelector('a[title="Edit"]').getAttribute('href').split('=')[1];
+                    window.location.href = `@Url.Action("LvsDetails")/${id}`;
+                }
+            });
+        });
+    </script>
+}

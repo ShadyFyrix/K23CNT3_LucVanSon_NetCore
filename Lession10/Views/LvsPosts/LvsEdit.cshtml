@@ -1,0 +1,194 @@
+﻿@model Lession10.Models.LvsPost
+
+@{
+    ViewData["Title"] = "Edit Post";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+            <div class="post-card card">
+                <div class="post-card-header bg-primary bg-opacity-10">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="h4 mb-0 text-primary">
+                            <i class="fas fa-edit me-2"></i>@ViewData["Title"]
+                        </h2>
+                        <a asp-action="LvsIndex" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-card-body">
+                    <form asp-action="LvsEdit" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger alert-animated mb-4"></div>
+                        <input type="hidden" asp-for="Lvsid" />
+                        <input type="hidden" asp-for="LvsImage" />
+
+                        <div class="mb-4">
+                            <label asp-for="Lvsname" class="post-form-label"></label>
+                            <input asp-for="Lvsname" class="form-control form-control-lg" required />
+                            <span asp-validation-for="Lvsname" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="ImageFile" class="post-form-label"></label>
+
+                            @if (!string.IsNullOrEmpty(Model.LvsImage))
+                            {
+                                <div class="current-image mb-3">
+                                    <label class="form-text mb-2">Current Image:</label>
+                                    <div class="border rounded p-2 d-inline-block">
+                                        <img src="@Model.LvsImage" class="post-image-preview" style="max-height: 200px;" />
+                                    </div>
+                                    <div class="form-text mt-2">
+                                        <a href="@Model.LvsImage" target="_blank" class="me-3">
+                                            <i class="fas fa-external-link-alt me-1"></i>View Full Image
+                                        </a>
+                                        <a href="#" class="text-danger" id="removeImageLink">
+                                            <i class="fas fa-trash-alt me-1"></i>Remove Image
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="new-image-upload" style="display: none;">
+                                    <div class="file-upload-wrapper border rounded p-3 bg-light">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <input asp-for="ImageFile" type="file" class="form-control"
+                                                       onchange="previewImage(this, 'imagePreview')" />
+                                                <div class="form-text">Recommended size: 1200x630 pixels. Max 2MB.</div>
+                                            </div>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary ms-3"
+                                                    onclick="document.getElementById('ImageFile').value = ''; document.getElementById('imagePreview').style.display = 'none';">
+                                                Clear
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="imagePreview" class="mt-3 text-center" style="display:none;">
+                                        <div class="border rounded p-2 d-inline-block">
+                                            <img id="previewImage" class="post-image-preview" style="max-height: 200px;" />
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="file-upload-wrapper border rounded p-3 bg-light">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-grow-1">
+                                            <input asp-for="ImageFile" type="file" class="form-control"
+                                                   onchange="previewImage(this, 'imagePreview')" />
+                                            <div class="form-text">Recommended size: 1200x630 pixels. Max 2MB.</div>
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary ms-3"
+                                                onclick="document.getElementById('ImageFile').value = ''; document.getElementById('imagePreview').style.display = 'none';">
+                                            Clear
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="imagePreview" class="mt-3 text-center" style="display:none;">
+                                    <div class="border rounded p-2 d-inline-block">
+                                        <img id="previewImage" class="post-image-preview" style="max-height: 200px;" />
+                                    </div>
+                                </div>
+                            }
+                            <span asp-validation-for="ImageFile" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="LvsContent" class="post-form-label"></label>
+                            <textarea asp-for="LvsContent" class="form-control" rows="8" required></textarea>
+                            <span asp-validation-for="LvsContent" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="LvsStats" class="post-form-label"></label>
+                            <select asp-for="LvsStats" class="form-select">
+                                <option value="true">Active (Visible to everyone)</option>
+                                <option value="false">Inactive (Hidden from public)</option>
+                            </select>
+                            <span asp-validation-for="LvsStats" class="text-danger small"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top">
+                            <button type="reset" class="btn btn-outline-danger">
+                                <i class="fas fa-undo me-1"></i> Reset Changes
+                            </button>
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="fas fa-save me-1"></i> Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function previewImage(input, previewId) {
+            const preview = document.getElementById(previewId);
+            const previewImage = document.getElementById('previewImage');
+            const file = input.files[0];
+
+            if (file) {
+                // Validate file size (2MB max)
+                if (file.size > 2 * 1024 * 1024) {
+                    alert('File size exceeds 2MB limit. Please choose a smaller file.');
+                    input.value = '';
+                    preview.style.display = 'none';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+
+        // Toggle between current image and new upload
+        document.getElementById('removeImageLink')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('.current-image').style.display = 'none';
+            document.querySelector('.new-image-upload').style.display = 'block';
+            document.querySelector('input[name="LvsImage"]').value = ''; // Clear the hidden field
+        });
+
+        // Enhanced validation
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+
+                        // Add smooth scrolling to first invalid element
+                        const firstInvalid = form.querySelector(':invalid');
+                        if (firstInvalid) {
+                            firstInvalid.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                            firstInvalid.focus();
+                        }
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+}

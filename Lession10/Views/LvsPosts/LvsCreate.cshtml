@@ -1,0 +1,160 @@
+﻿@model Lession10.Models.LvsPost
+
+@{
+    ViewData["Title"] = "Create New Post";
+}
+
+<div class="container py-5 animate-in">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-hover">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="mb-0">Create New Post</h4>
+                    <a asp-action="LvsIndex" class="btn btn-outline">
+                        <i class="fas fa-arrow-left mr-2"></i>Back
+                    </a>
+                </div>
+
+                <div class="card-body p-4">
+                    <form asp-action="LvsCreate" enctype="multipart/form-data" class="needs-validation" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-4 animate-in"></div>
+
+                        <div class="mb-4">
+                            <label asp-for="Lvsname" class="form-label">Post Title</label>
+                            <input asp-for="Lvsname" class="form-control" placeholder="Enter post title" required />
+                            <span asp-validation-for="Lvsname" class="text-danger small mt-1 d-block"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="ImageFile" class="form-label">Featured Image</label>
+                            <div class="border-2 border-dashed rounded-xl p-4 text-center"
+                                 id="dropzone"
+                                 ondrop="dropHandler(event)"
+                                 ondragover="dragOverHandler(event)">
+                                <input asp-for="ImageFile" type="file" class="d-none" id="fileInput"
+                                       onchange="previewImage(this, 'imagePreview')" />
+                                <div class="mb-3">
+                                    <i class="fas fa-cloud-upload-alt fa-2x text-primary mb-2"></i>
+                                    <p class="mb-1">Drag & drop your image here</p>
+                                    <p class="text-muted small mb-3">or click to browse</p>
+                                    <button type="button" class="btn btn-sm btn-primary"
+                                            onclick="document.getElementById('fileInput').click()">
+                                        Select File
+                                    </button>
+                                </div>
+                                <div id="imagePreview" class="mt-3" style="display:none;">
+                                    <img id="previewImage" class="preview-image" />
+                                </div>
+                            </div>
+                            <span asp-validation-for="ImageFile" class="text-danger small mt-1 d-block"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="LvsContent" class="form-label">Content</label>
+                            <textarea asp-for="LvsContent" class="form-control" rows="6"
+                                      placeholder="Write your post content here..." required></textarea>
+                            <span asp-validation-for="LvsContent" class="text-danger small mt-1 d-block"></span>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="LvsStats" class="form-label">Status</label>
+                            <select asp-for="LvsStats" class="form-select">
+                                <option value="true">Published</option>
+                                <option value="false">Draft</option>
+                            </select>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-5 pt-3 border-top">
+                            <button type="reset" class="btn btn-outline">
+                                <i class="fas fa-redo mr-2"></i>Reset
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus-circle mr-2"></i>Create Post
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Drag and drop functionality
+        function dropHandler(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('fileInput');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                previewImage(fileInput, 'imagePreview');
+            }
+        }
+
+        function dragOverHandler(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('border-primary');
+        }
+
+        // Image preview
+        function previewImage(input, previewId) {
+            const preview = document.getElementById(previewId);
+            const previewImage = document.getElementById('previewImage');
+            const dropzone = document.getElementById('dropzone');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    preview.style.display = 'block';
+                    dropzone.classList.remove('border-primary');
+                    dropzone.style.border = 'none';
+                    dropzone.style.padding = '0';
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Form validation
+        (function() {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        // Scroll to first invalid element
+                        const firstInvalid = form.querySelector(':invalid');
+                        if (firstInvalid) {
+                            firstInvalid.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                            firstInvalid.focus();
+                        }
+                    }
+
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+
+    <style>
+        #dropzone {
+            border: 2px dashed #e9ecef;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+            #dropzone:hover {
+                border-color: var(--primary);
+                background: var(--primary-light);
+            }
+    </style>
+}

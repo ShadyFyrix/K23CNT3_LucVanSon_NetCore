@@ -1,0 +1,78 @@
+﻿@model Lession10.Models.LvsPost
+
+@{
+    ViewData["Title"] = "Post Details";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="post-card card">
+                <div class="post-card-header bg-primary bg-opacity-10">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="h4 mb-0 text-primary">
+                            <i class="fas fa-file-alt me-2"></i>@ViewData["Title"]
+                        </h2>
+                        <a asp-action="LvsIndex" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="post-form-label">Post ID</label>
+                                <div class="form-control bg-light">@Model.Lvsid</div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="mb-3">
+                                <label class="post-form-label">Status</label>
+                                <div>
+                                    <span class="status-badge badge @(Model.LvsStats ? "bg-success" : "bg-secondary")">
+                                        @(Model.LvsStats ? "Active" : "Inactive")
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="post-form-label">Title</label>
+                        <div class="form-control bg-light">@Model.Lvsname</div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.LvsImage))
+                    {
+                        <div class="mb-4">
+                            <label class="post-form-label">Featured Image</label>
+                            <div class="text-center">
+                                <img src="@Model.LvsImage" class="post-image-preview img-fluid shadow-sm"
+                                     onclick="window.open('@Model.LvsImage', '_blank')"
+                                     style="cursor: zoom-in;" />
+                            </div>
+                        </div>
+                    }
+
+                    <div class="mb-4">
+                        <label class="post-form-label">Content</label>
+                        <div class="form-control bg-light post-content" style="min-height: 200px;">
+                            @Model.LvsContent
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between border-top pt-4 mt-4">
+                        <a asp-action="LvsEdit" asp-route-id="@Model.Lvsid" class="btn btn-primary">
+                            <i class="fas fa-edit me-1"></i> Edit Post
+                        </a>
+                        <a asp-action="LvsIndex" class="btn btn-outline-secondary">
+                            <i class="fas fa-list me-1"></i> View All Posts
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

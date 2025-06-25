@@ -1,0 +1,83 @@
+﻿@model Lession10.Models.LvsPost
+
+@{
+    ViewData["Title"] = "Delete Post";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="post-card card border-danger">
+                <div class="post-card-header bg-danger bg-opacity-10 border-danger">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="h4 mb-0 text-danger">
+                            <i class="fas fa-exclamation-triangle me-2"></i>@ViewData["Title"]
+                        </h2>
+                        <a asp-action="LvsIndex" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-1"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-card-body">
+                    <div class="alert alert-danger alert-animated mb-4" role="alert">
+                        <h4 class="alert-heading d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle me-2"></i>Warning!
+                        </h4>
+                        <p>You are about to permanently delete this post. This action cannot be undone. Are you sure you want to proceed?</p>
+                        <hr>
+                        <p class="mb-0">Post ID: <strong>@Model.Lvsid</strong></p>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="post-form-label">Title</label>
+                                <div class="form-control bg-light">@Model.Lvsname</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="post-form-label">Status</label>
+                                <div>
+                                    <span class="status-badge badge @(Model.LvsStats ? "bg-success" : "bg-secondary")">
+                                        @(Model.LvsStats ? "Active" : "Inactive")
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.LvsImage))
+                    {
+                        <div class="mb-4">
+                            <label class="post-form-label">Featured Image</label>
+                            <div class="text-center">
+                                <img src="@Model.LvsImage" class="post-image-preview img-fluid shadow-sm" alt="Post image" />
+                            </div>
+                        </div>
+                    }
+
+                    <div class="mb-4">
+                        <label class="post-form-label">Content Preview</label>
+                        <div class="form-control bg-light post-content" style="min-height: 150px; max-height: 300px; overflow-y: auto;">
+                            @Html.Raw(Model.LvsContent)
+                        </div>
+                    </div>
+
+                    <form asp-action="LvsDelete" method="post" class="d-flex justify-content-between border-top pt-4 mt-4">
+                        <input type="hidden" asp-for="Lvsid" />
+                        <input type="hidden" asp-for="LvsImage" />
+
+                        <a asp-action="LvsIndex" class="btn btn-outline-secondary">
+                            <i class="fas fa-times me-1"></i> Cancel
+                        </a>
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash-alt me-1"></i> Confirm Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
