@@ -1,0 +1,54 @@
+﻿@model LucVanSon_231090087_Net.Models.LvsEmployee
+
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-primary mb-2">Edit Employee</h1>
+    <p class="text-gray-600 dark:text-gray-400">Update the employee information below.</p>
+</div>
+
+<div class="card fade-in">
+    <form asp-action="LvsEdit" class="space-y-6">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="LvsEmpId" />
+
+        <div class="form-group">
+            <label asp-for="LvsEmpName" class="form-label"></label>
+            <input asp-for="LvsEmpName" class="form-control" placeholder="Enter employee name" />
+            <span asp-validation-for="LvsEmpName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LvsEmpStartDate" class="form-label"></label>
+            <input asp-for="LvsEmpStartDate" type="date" class="form-control" />
+            <span asp-validation-for="LvsEmpStartDate" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LvsEmpStats" class="form-label">Employment Status</label>
+            <select asp-for="LvsEmpStats" class="form-control">
+                <option value="true">Show</option>
+                <option value="false">Hide</option>
+            </select>
+            <span asp-validation-for="LvsEmpStats" class="text-danger"></span>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button type="submit" class="btn btn-primary">
+                <sl-icon name="save" class="mr-2"></sl-icon> Save Changes
+            </button>
+
+            <a asp-action="LvsIndex" class="btn btn-outline">
+                <sl-icon name="x" class="mr-2"></sl-icon> Cancel
+            </a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

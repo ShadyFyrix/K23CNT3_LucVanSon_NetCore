@@ -1,0 +1,60 @@
+﻿@model IEnumerable<LucVanSon_231090087_Net.Models.LvsEmployee>
+
+@{
+    ViewData["Title"] = "Employee Directory";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="h2 fw-bold text-primary mb-2">Employee Directory</h1>
+        <p class="text-muted">Manage your organization's employees</p>
+    </div>
+
+    <a asp-action="LvsCreate" class="btn btn-primary">
+        <i class="bi bi-person-plus me-2"></i>Add Employee
+    </a>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.LvsEmpName)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsEmpStartDate)</th>
+                        <th>@Html.DisplayNameFor(model => model.LvsEmpStats)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="fw-medium">@Html.DisplayFor(modelItem => item.LvsEmpName)</td>
+                            <td>@item.LvsEmpStartDate.ToString("MMMM dd, yyyy")</td>
+                            <td>
+                                <span class="badge bg-@(item.LvsEmpStats ? "success" : "secondary")">
+                                    @(item.LvsEmpStats ? "Show" : "Hide")
+                                </span>
+                            </td>
+                            <td>
+                                <div class="d-flex gap-2">
+                                    <a asp-action="LvsEdit" asp-route-id="@item.LvsEmpId" class="btn btn-sm btn-outline-primary" title="Edit">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
+                                    <a asp-action="LvsDetails" asp-route-id="@item.LvsEmpId" class="btn btn-sm btn-outline-info" title="Details">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
+                                    <a asp-action="LvsDelete" asp-route-id="@item.LvsEmpId" class="btn btn-sm btn-outline-danger" title="Delete">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿@model LucVanSon_231090087_Net.Models.LvsEmployee
+
+@{
+    ViewData["Title"] = "Add New Employee";
+}
+
+<div class="mb-4">
+    <h1 class="display-5 fw-bold text-primary mb-2">Add New Employee</h1>
+    <p class="lead text-muted">Fill out the form below to add a new employee to the system.</p>
+</div>
+
+<div class="card mb-4">
+    <div class="card-body">
+        <form asp-action="LvsCreate">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="LvsEmpName" class="form-label"></label>
+                <input asp-for="LvsEmpName" class="form-control" placeholder="Enter employee name">
+                <span asp-validation-for="LvsEmpName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LvsEmpStartDate" class="form-label"></label>
+                <input asp-for="LvsEmpStartDate" type="date" class="form-control">
+                <span asp-validation-for="LvsEmpStartDate" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="LvsEmpStats" class="form-label">Employment Status</label>
+                <select asp-for="LvsEmpStats" class="form-select">
+                    <option value="true">Show</option>
+                    <option value="false">Hide</option>
+                </select>
+                <span asp-validation-for="LvsEmpStats" class="text-danger"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-person-add me-2"></i>Create Employee
+                </button>
+                <a asp-action="LvsIndex" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-2"></i>Back to List
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

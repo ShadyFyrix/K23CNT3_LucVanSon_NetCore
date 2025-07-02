@@ -1,0 +1,50 @@
+﻿@model LucVanSon_231090087_Net.Models.LvsEmployee
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<div class="mb-8">
+    <h1 class="text-3xl font-bold text-primary mb-2">Employee Details</h1>
+    <p class="text-gray-600 dark:text-gray-400">View detailed information about this employee.</p>
+</div>
+
+<div class="card fade-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <h3 class="text-xl font-semibold mb-4">Basic Information</h3>
+            <dl class="space-y-4">
+                <div>
+                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Employee Name</dt>
+                    <dd class="mt-1 text-lg">@Html.DisplayFor(model => model.LvsEmpName)</dd>
+                </div>
+
+                <div>
+                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Start Date</dt>
+                    <dd class="mt-1 text-lg">@Model.LvsEmpStartDate.ToString("MMMM dd, yyyy")</dd>
+                </div>
+
+                <div>
+                    <dt class="text-sm font-medium text-gray-500 dark:text-gray-400">Status</dt>
+                    <dd class="mt-1">
+                        <sl-badge variant="@(Model.LvsEmpStats ? "success" : "neutral")" pill>
+                            @(Model.LvsEmpStats ? "Show" : "Hide")
+                        </sl-badge>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-semibold mb-4">Quick Actions</h3>
+            <div class="flex flex-wrap gap-3">
+                <a asp-action="LvsEdit" asp-route-id="@Model.LvsEmpId" class="btn btn-primary">
+                    <sl-icon name="pencil" class="mr-2"></sl-icon> Edit Employee
+                </a>
+                <a asp-action="LvsIndex" class="btn btn-outline">
+                    <sl-icon name="arrow-left" class="mr-2"></sl-icon> Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
